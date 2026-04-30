@@ -8,15 +8,16 @@ spring:
     import: optional:configserver:http://localhost:7071
   cloud:
     gateway:
-      routes:
-        - id: product-service
-          uri: lb://PRODUCT-SERVICE
-          predicates:
-            - Path=/api/v1/products/**
-        - id: customer-service
-          uri: lb://CUSTOMER-SERVICE
-          predicates:
-            - Path=/api/v1/customers/**
+      mvc:
+        routes:
+          - id: product-service
+            uri: lb://PRODUCT-SERVICE
+            predicates:
+              - Path=/api/v1/products/**
+          - id: customer-service
+            uri: lb://CUSTOMER-SERVICE
+            predicates:
+              - Path=/api/v1/customers/**
 
 eureka:
   client:

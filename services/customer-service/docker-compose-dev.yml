@@ -1,0 +1,15 @@
+services:
+  mysql-customers:
+    image: mysql:8.0
+    container_name: mysql-customers
+    restart: always
+    ports:
+      - "3318:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sales_customers_db
+    volumes:
+      - mysql-customers-data:/var/lib/mysql
+
+volumes:
+  mysql-customers-data:
