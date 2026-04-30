@@ -48,3 +48,6 @@ Todos los servicios:
    -> se registran en registry-server / Eureka
    -> cargan configuración desde config-server
    -> usan persistencia propia en MySQL
+   ## Evidencia académica
+
+Este repositorio contiene el avance correspondiente a la Unidad 1 del curso de Desarrollo de Aplicaciones Distribuidas.
