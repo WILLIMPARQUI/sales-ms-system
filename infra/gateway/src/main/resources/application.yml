@@ -10,6 +10,14 @@ spring:
     gateway:
       mvc:
         routes:
+          - id: payment-service
+            uri: lb://PAYMENT-SERVICE
+            predicates:
+              - Path=/api/v1/payments,/api/v1/payments/**
+          - id: inventory-service
+            uri: lb://INVENTORY-SERVICE
+            predicates:
+              - Path=/api/v1/inventory/**
           - id: auth-service
             uri: lb://AUTH-SERVICE
             predicates:
