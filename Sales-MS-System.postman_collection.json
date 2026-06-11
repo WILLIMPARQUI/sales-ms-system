@@ -1,0 +1,113 @@
+﻿{
+  "info": {
+    "name": "Sales MS System - Microservicios",
+    "description": "Colección Postman para probar el sistema de ventas distribuido con Gateway, Kafka y Actuator.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Gateway - Health",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:7091/actuator/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "7091",
+          "path": ["actuator", "health"]
+        }
+      }
+    },
+    {
+      "name": "Order Service - Crear pedido demo por Gateway",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:7091/api/v1/orders/demo",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "7091",
+          "path": ["api", "v1", "orders", "demo"]
+        }
+      }
+    },
+    {
+      "name": "Product Service - Health",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8082/actuator/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8082",
+          "path": ["actuator", "health"]
+        }
+      }
+    },
+    {
+      "name": "Auth Service - Health",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8081/actuator/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8081",
+          "path": ["actuator", "health"]
+        }
+      }
+    },
+    {
+      "name": "Customer Service - Health",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8083/actuator/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8083",
+          "path": ["actuator", "health"]
+        }
+      }
+    },
+    {
+      "name": "Inventory Service - Health",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8084/actuator/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8084",
+          "path": ["actuator", "health"]
+        }
+      }
+    },
+    {
+      "name": "Order Service - Health",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8085/actuator/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8085",
+          "path": ["actuator", "health"]
+        }
+      }
+    },
+    {
+      "name": "Payment Service - Health",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8086/actuator/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8086",
+          "path": ["actuator", "health"]
+        }
+      }
+    }
+  ]
+}

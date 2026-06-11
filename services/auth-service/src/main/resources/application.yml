@@ -1,0 +1,27 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: auth-service
+  config:
+    import: optional:configserver:http://localhost:7071
+  datasource:
+    url: jdbc:mysql://localhost:3316/sales_auth_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7081/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

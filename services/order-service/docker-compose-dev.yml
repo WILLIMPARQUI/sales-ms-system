@@ -1,0 +1,15 @@
+services:
+  mysql-orders:
+    image: mysql:8.0
+    container_name: mysql-orders
+    restart: always
+    ports:
+      - "3319:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sales_orders_db
+    volumes:
+      - mysql-orders-data:/var/lib/mysql
+
+volumes:
+  mysql-orders-data:
